@@ -1,0 +1,17 @@
+<ngx-datatable class='ngx-datatable bv-soft' [rows]='rows' columnMode="force" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarH]="true" [scrollbarV]="true" style="height: 300px;">
+    <ngx-datatable-column name="名称" prop="name">
+        <ng-template *ngFor="let i of rows" ngx-datatable-cell-template>
+            <strong>{{rows[i].name}}</strong>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="岁数" prop="age">
+        <ng-template *ngFor="let i of rows" ngx-datatable-cell-template>
+            <strong>{{rows[i].age}}</strong>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="公司" prop="company">
+        <ng-template *ngFor="let i of rows">
+            <strong>{{rows[i].company}}</strong>
+        </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable>
